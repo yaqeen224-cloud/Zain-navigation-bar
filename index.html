@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Zain Jordan: Best Mobile Network & Fiber Internet Services in Jordan
+        </title>
+
+        <link rel = "icon" type = "image/x-icon" href = "./67a949bde63f0-Zain.png">
+        <link rel = "preconnect" href = "https://fonts.googleapis.com">
+        <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
+        <link href = "https://fonts.googleapis.com/css2?family=Zain:ital,wght@0,300;0,400;0,700;0,800;0,900&display=swap" rel = "stylesheet">
+       
+
+        <style>
+            body, header {
+                font-family: 'Zain', sans-serif;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+            header {
+                background-color: white;
+                padding: 0 100px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                display: flex;
+                border-radius: 0;
+                border-bottom: 1px solid #e9ecef;
+                overflow: hidden;
+                display: flex;
+                justify-content: space-between; 
+                align-items: center;
+                cursor: pointer;
+                font-size: 16px;
+                overflow: visible;
+            }
+
+            #personal {
+                background-color: #38B6E8;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                text-decoration: none;
+                display: inline-block;
+            }
+
+            #business {
+                background-color: #ffffff;
+                border: none;
+                padding: 10px 20px;
+                display: inline-block;
+            }
+
+            #header-top-left {
+                display: flex;
+                align-items: center;
+            }
+
+            #header-top-right {
+                display: flex;
+                align-items: center;
+                gap: 40px;
+            }
+
+            #country-list {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                display: none;
+                position: absolute;
+            }
+
+            #country-list li a {
+                display: flex;             
+                align-items: center;       
+                gap: 12px;                 
+                padding: 8px 16px;         
+                text-decoration: none;
+                transition: background 0.2s ease;
+            }
+
+            #country-list li a:hover {
+                background-color: #f0f0f0;
+                font-size: 18px;
+            }
+            
+            .toggleCountry {
+                display: block !important;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                margin-top: 8px;
+                background-color: #ffffff;
+                border: 1px solid #ccc;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+                width: 170px;
+                z-index: 1000;
+            }
+
+            #arrow {
+                transition: transform 0.3s ease;
+                display: inline-block;
+            }
+            #arrow.rotate-arrow {
+                    transform: rotate(180deg);
+                }
+
+        </style>
+    </head>
+
+
+    <body>
+        <header>
+            <section id = "header-top-left">
+                <a id = "personal" href = "index.html">Zain Personal</a>
+                <a id = "business" href = "https://www.jo.zain.com/english/business/pages/default.aspx">Zain Business</a>
+            </section>
+
+            <section id = "header-top-right">
+                <a href="https://eshop.jo.zain.com/en/findus"><img src = "./location.png" alt = "locaion" width = "15" height = "15">Find Us</a>
+
+                <div id="country-container" style="position: relative;">   
+                    <p id="country" onclick="toggleCountryList(event)">Jordan <span id="arrow">▼</span></p>
+
+                    <ul id="country-list">
+                        <li id="bh"><a href="https://www.bh.zain.com/"><img src="./bh.png" alt="Bahrain" width="20" height="20">Bahrain</a></li>
+                        <li id="ir"><a href="https://www.iq.zain.com/en/web/iraq/personal"><img src="./ir.png" alt="Iraq" width="20" height="20">Iraq</a></li>
+                        <li id="lb"><a href="https://touch.com.lb/en"><img src="./lb.png" alt="Lebanon" width="20" height="20">Lebanon</a></li>
+                        <li id="kw"><a href="https://www.kw.zain.com/ar/shop?lang=en"><img src="./kw.png" alt="Kuwait" width="20" height="20">Kuwait</a></li>                    
+                        <li id="mr"><a href="#"><img src="./mr.png" alt="Morocco" width="20" height="20">Morocco</a></li>
+                        <li id="ksa"><a href="https://sa.zain.com/ar"><img src="./ksa.png" alt="Saudi Arabia" width="20" height="20">Saudi Arabia</a></li>
+                        <li id="sd"><a href="https://www.sd.zain.com/english/pages/home.aspx"><img src="./sd.png" alt="Sudan" width="20" height="20">Sudan</a></li>
+                        <li id="ssd"><a href="https://ss.zain.com/"><img src="./ssd.png" alt="South Sudan" width="20" height="20">South Sudan</a></li>
+                    </ul>
+                </div>
+
+                <a href="https://www.jo.zain.com/arabic/pages/default.aspx">العربية</a>
+            </section>
+        </header>
+
+            <script>
+                function toggleCountryList(event) {
+                    event.stopPropagation();
+                    let arrow = document.getElementById("arrow");
+                    let list = document.getElementById("country-list");
+
+                    list.classList.toggle("toggleCountry");
+                    arrow.classList.toggle("rotate-arrow"); 
+                }
+                
+                window.addEventListener("click", function(event) {
+                let list = document.getElementById("country-list");
+                let arrow = document.getElementById("arrow");
+
+                if (list.classList.contains("toggleCountry")) {
+                    list.classList.remove("toggleCountry");
+                    arrow.classList.remove("rotate-arrow"); 
+                }
+            });
+            </script>
+    
+    </body>
+</html>
+        
