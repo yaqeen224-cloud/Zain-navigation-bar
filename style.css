@@ -1,0 +1,452 @@
+            body, header, button, input {
+                font-family: 'Zain', sans-serif;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+            p, a, li, svg {
+                cursor: pointer;
+            }
+
+            ul {
+                list-style-type: none;
+            }
+
+            button {
+                cursor: pointer;
+            }
+
+            header {
+                background-color: white;
+                /*box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                border-radius: 0;*/
+                border-bottom: 1px solid #e9ecef;
+                overflow: hidden;
+                justify-content: space-between; 
+                font-size: 16px;
+                overflow: visible;
+                position: relative;
+            }
+
+            .top-bar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 125px;
+            }
+
+            .bottom-bar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 115px;
+            }
+
+            #personal {
+                background-color: #38B6E8;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                text-decoration: none;
+                display: inline-block;
+            }
+
+            #business {
+                background-color: #ffffff;
+                border: none;
+                padding: 10px 20px;
+                display: inline-block;
+            }
+
+            #header-top-left {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+
+            #header-top-right {
+                display: flex;
+                align-items: center;
+                gap: 40px;
+            }
+
+            #country-list {
+                padding: 0;
+                margin: 0;
+                display: none;
+                position: absolute;
+            }
+
+            #country-list li a {
+                display: flex;             
+                align-items: center;       
+                gap: 12px;                 
+                padding: 8px 16px;         
+                text-decoration: none;
+                transition: background 0.2s ease;
+            }
+
+            #country-list li a:hover {
+                background-color: #f0f0f0;
+                font-size: 18px;
+            }
+            
+            .toggleCountry {
+                display: block !important;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                margin-top: 8px;
+                background-color: #ffffff;
+                border: 1px solid #ccc;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+                width: 170px;
+                z-index: 1000;
+            }
+
+            #country-container {
+                position: relative;
+                display: inline-block;
+            }
+
+            #arrowToggle, #arrowToggle1, #arrowToggle2, #arrowToggle3, #arrowToggle4 {
+                transition: transform 0.3s ease;
+                display: inline-block;
+                
+            }
+
+            #arrowToggle.rotate-arrow {
+                    transform: rotate(180deg);
+            }
+
+            #arrowToggle1.rotate-arrow {
+                    transform: rotate(180deg);
+            }
+
+            #arrowToggle2.rotate-arrow {
+                    transform: rotate(180deg);
+            }
+
+            #arrowToggle3.rotate-arrow {
+                    transform: rotate(180deg);
+            }
+
+            #arrowToggle4.rotate-arrow {
+                    transform: rotate(180deg);
+            }
+
+            hr {
+                border: none;
+                border-top: 2px solid #e9ecef;
+                margin: 0;
+                width: 100%;
+            }
+
+            h2, #more-5G, #mobile-lists-container {
+                cursor: default;
+            }
+
+            #header-bottom-left {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+            }
+
+            .greyArrow {
+                color: grey;
+            }
+
+            
+            /*5G*/
+            #fiveg-logo {
+                position: absolute;
+                right: 80px;             
+                top: 10px;
+                width: 400px;    
+                height: auto;
+                grid-row: span 2;
+                cursor: default;
+            }
+
+            #fiveg-list {         
+                padding: 0;
+                margin: 0;
+            }
+
+            #fiveg-container {
+                grid-template-columns: repeat(5, max-content);
+                column-gap: 30px;
+                /*align-items: left;*/
+                grid-template-columns: 1fr 1.5fr;
+                flex-shrink: 0;
+            }
+            #fiveg-list-container {
+                display: none;
+                position: absolute;
+                top: 100%;               
+                left: 0;
+                width: 100%;            
+                box-sizing: border-box;
+                background-color: #ffffff;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+                border-top: 1px solid #f1f3f5;
+                padding: 30px 175px;     
+                z-index: 9999;
+            }
+
+            #fiveg-container:hover #fiveg-list-container, #fiveg-container:focus-within #fiveg-list-container {
+                display: block;
+                cursor: pointer;
+            }
+
+            .show-dropdown {
+                display: block !important;
+                flex-wrap: wrap;
+                gap: 30px;
+            }       
+
+            #fiveg-list li {
+                margin-bottom: 12px;
+            }
+
+            /*more buttons*/
+            .more-5G {
+                grid-column: 1/-1;
+                border: 0.5px solid grey;
+                width: 350px;
+                border-radius: 12px;
+                align-self: flex-start;
+                gap: 30px;
+                padding: 25px 100px;
+                justify-content: space-between;
+                align-items: center;
+                display: flex;
+                font-size: 20px;
+            }
+
+            #more-5G-button {
+                background-color: #D81D7F;
+                border: none;
+                color: #ffffff;
+                border-radius: 50px;
+                padding: 5px 30px;
+            }
+
+            #more-blue-button {
+                background-color: #38B6E8;
+                border: none;
+                color: #ffffff;
+                border-radius: 50px;
+                cursor: pointer;
+                padding: 5px 30px;
+            }
+
+            .more-eshop, .more-mobile, #more-internet {
+                border: 0.5px solid grey;
+                border-radius: 12px;
+                align-self: flex-start;
+                padding: 25px 100px;
+                justify-content: space-between;
+                align-items: center;
+                display: flex;
+                font-size: 20px;  
+                box-sizing: border-box;
+                gap: 100px;
+            }
+
+            /*eShop*/
+            #eshop-lists-container {
+                gap: 20px;
+                display: none;
+                position: absolute;
+                top: 100%;               
+                left: 0;
+                width: 100%;             
+                box-sizing: border-box;
+                background-color: #ffffff;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+                border-top: 1px solid #f1f3f5;
+                padding: 30px 150px;     
+                z-index: 9999;
+                
+            }
+
+            #eshop-list1-devices, #eshop-list2-accessories {
+                padding: 0;
+                margin: 0;
+            }
+
+            #eshop-list1-devices li, #eshop-list2-accessories li {
+                margin-bottom: 12px;
+            }
+
+            #eshop-lists-container.show-dropdown  {
+                display: grid !important;              
+                grid-template-columns: 1fr 1fr 1.5fr;
+                column-gap: 20px;                    
+                align-items: start;
+            }
+
+            #eshop-products {
+                position: absolute;
+                right: 80px;             
+                top: 0;
+                
+            }
+
+            #more-eshop {
+                grid-column: 1/-1;
+                justify-self: start;
+            }
+
+            /*mobile*/
+            #mobile-lists-container {
+                display: none;
+                gap: 40px;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                box-sizing: border-box;
+                background-color: white;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+                border-top: 1px solid #f1f3f5;;
+                padding: 30px 140px;
+                z-index: 9999;
+            }
+
+            #mobile-lists-container.show-dropdown  {
+                display: grid !important;              
+                grid-template-columns: 1fr 1fr 1fr 1fr 1.5fr;
+                /*column-gap: 10px; */                   
+                align-items: start;
+            }
+
+            #mobile-list1-postpaid li, #mobile-list2-prepaid li, #mobile-list3-roamingAndInternational li, #mobile-list4-services li {
+                margin-bottom: 12px;
+            }
+
+            #mobile-list1-postpaid, #mobile-list2-prepaid, #mobile-list3-roamingAndInternational, #mobile-list4-services {
+                padding: 0;
+                margin: 0;
+            }
+
+            #more-mobile {
+                grid-column: 1/-1;
+                justify-self: start;
+                grid-row: span 2;
+            }
+
+            .mobile-img {
+                position: absolute;
+                right: 10px;             
+                top: 0;
+                grid-row: span 2;
+            }
+
+
+            /*internet*/
+            #internet-lists-container {
+                display: none;
+                gap: 70px;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                box-sizing: border-box;
+                background-color: white;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+                border-top: 1px solid #f1f3f5;;
+                padding: 30px 0px 30px 140px; 
+                z-index: 9999;
+            }
+
+            #internet-lists-container.show-dropdown  {
+                display: grid !important;              
+                grid-template-columns: 1fr 1fr 1fr 1fr 1.5fr;
+                column-gap: 10px;                   
+                align-items: start;
+            }
+
+            #internet-list1-postpaid li, #internet-list2-prepaid li, #internet-list3-internetServices li {
+                margin-bottom: 12px;
+            }
+
+            #internet-list1-postpaid, #internet-list2-prepaid, #internet-list3-internetServices {
+                padding: 0;
+                margin: 0;
+            }
+
+            #more-internet {
+                grid-column: 1/-1;
+                justify-self: start;
+                grid-row: span 2;
+            }
+
+            .internet-img {
+                position: absolute;
+                right: 10px;             
+                top: 0;
+            }
+
+            
+            /*header bottom right*/
+            #header-bottom-right {
+                display: inline-flex;
+                align-items: center;
+                gap: 40px;
+            }
+
+           #search-popup {
+                display: none;
+                position: fixed;
+                color: white;
+                background-color: rgba(33, 37, 41, 0.82); 
+                /*backdrop-filter: blur(5px);*/
+                text-align: center;
+                width: 100%;
+                padding: 100px;
+                top: 140px;
+                left: 0;
+                height: calc(100vh - 140px);
+                z-index: 100000;
+                box-sizing: border-box;
+            }
+
+            #search-box-input {
+                border: none;
+                background: transparent;
+                outline: none;
+                color: white;
+                width: 100%;
+            }
+
+            #search-box {
+                display: inline-flex;
+                background-color: transparent;
+                border:1px solid rgba(255, 255, 255, 0.5);
+                border-radius: 50px;
+                padding: 20px;
+                width: 80%;
+                color: white;
+                box-sizing: border-box;
+            }
+
+            #close {
+                text-align: right;
+            }
+
+            #search-popup.show {
+                display: block !important;
+            }
+
+            .vertical-divider {
+                display: inline-block;
+                width: 2px;              
+                height: 40px;           
+                background-color: #e9ecef;
+            }
+
